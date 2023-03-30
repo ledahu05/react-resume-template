@@ -8,24 +8,22 @@ import {
   SparklesIcon,
 } from '@heroicons/react/outline';
 
-import GithubIcon from '../components/Icon/GithubIcon';
-import InstagramIcon from '../components/Icon/InstagramIcon';
 import LinkedInIcon from '../components/Icon/LinkedInIcon';
-import StackOverflowIcon from '../components/Icon/StackOverflowIcon';
-import TwitterIcon from '../components/Icon/TwitterIcon';
 import heroImage from '../images/header-background.webp';
-import porfolioImage1 from '../images/portfolio/portfolio-1.jpg';
-import porfolioImage2 from '../images/portfolio/portfolio-2.jpg';
-import porfolioImage3 from '../images/portfolio/portfolio-3.jpg';
-import porfolioImage4 from '../images/portfolio/portfolio-4.jpg';
-import porfolioImage5 from '../images/portfolio/portfolio-5.jpg';
-import porfolioImage6 from '../images/portfolio/portfolio-6.jpg';
-import porfolioImage7 from '../images/portfolio/portfolio-7.jpg';
-import porfolioImage8 from '../images/portfolio/portfolio-8.jpg';
-import porfolioImage9 from '../images/portfolio/portfolio-9.jpg';
-import porfolioImage10 from '../images/portfolio/portfolio-10.jpg';
-import porfolioImage11 from '../images/portfolio/portfolio-11.jpg';
-import profilepic from '../images/profilepic.jpg';
+import porfolioImage1 from '../images/portfolio/blueplan-4.png';
+import porfolioImage2 from '../images/portfolio/blueplan-5.png';
+import porfolioImage3 from '../images/portfolio/blueplan-6.png';
+import porfolioImage4 from '../images/portfolio/lalilo-1.png';
+import porfolioImage5 from '../images/portfolio/lalilo-2.png';
+import porfolioImage7 from '../images/portfolio/moona-1.png';
+import porfolioImage6 from '../images/portfolio/moona-2.png';
+import porfolioImage8 from '../images/portfolio/moona-3.png';
+import porfolioImage9 from '../images/portfolio/renovationman-1.png';
+import porfolioImage10 from '../images/portfolio/syment-1.png';
+import porfolioImage11 from '../images/portfolio/syment-2.png';
+import porfolioImage12 from '../images/portfolio/syment-3.png';
+import porfolioImage13 from '../images/portfolio/syment-4.png';
+import profilepic from '../images/profile.webp';
 import testimonialImage from '../images/testimonial.webp';
 import {
   About,
@@ -44,8 +42,8 @@ import {
  * Page meta data
  */
 export const homePageMeta: HomepageMeta = {
-  title: 'React Resume Template',
-  description: "Example site built with Tim Baker's react resume template",
+  title: 'Resume',
+  description: 'Christophe Seguinot - Senior Frontend Developer - Resume',
 };
 
 /**
@@ -69,18 +67,21 @@ export type SectionId = typeof SectionId[keyof typeof SectionId];
  */
 export const heroData: Hero = {
   imageSrc: heroImage,
-  name: `I'm Tim Baker.`,
+  name: `I'm Christophe Seguinot.`,
   description: (
     <>
       <p className="prose-sm text-stone-200 sm:prose-base lg:prose-lg">
-        I'm a Victoria based <strong className="text-stone-100">Full Stack Software Engineer</strong>, currently working
-        at <strong className="text-stone-100">Instant Domains</strong> helping build a modern, mobile-first, domain
-        registrar and site builder.
+        I'm a Hautes-Alpes based <strong className="text-stone-100">Senior Frontend Software Engineer</strong>,
+        currently working as a freelance and looking for a{' '}
+        <strong className="text-stone-100">permanent contract</strong>, I'm expert in React/Typescript with extensive
+        experience developing high-quality applications using modern web technologies and frameworks.
       </p>
       <p className="prose-sm text-stone-200 sm:prose-base lg:prose-lg">
-        In my free time time, you can catch me training in <strong className="text-stone-100">Muay Thai</strong>,
-        plucking my <strong className="text-stone-100">banjo</strong>, or exploring beautiful{' '}
-        <strong className="text-stone-100">Vancouver Island</strong>.
+        I am a strong advocate for <strong className="text-stone-100">best practices</strong> and{' '}
+        <strong className="text-stone-100">clean code</strong>. I always strive to maintain a balance between{' '}
+        <strong className="text-stone-100">code quality</strong> and{' '}
+        <strong className="text-stone-100">project timelines</strong> while adapting my coding standards to the
+        expectations of the teams I work with.
       </p>
     </>
   ),
@@ -104,16 +105,17 @@ export const heroData: Hero = {
  */
 export const aboutData: About = {
   profileImageSrc: profilepic,
-  description: `Use this bio section as your way of describing yourself and saying what you do, what technologies you like
-  to use or feel most comfortable with, describing your personality, or whatever else you feel like throwing
-  in.`,
+  description: `I have been in web development for over 10 years. With expertise in React, Next.js, TypeScript, and other web technologies, I have a proven track record of delivering high-quality applications and integrating seamlessly into development teams.
+  Initially working as a freelancer to explore various projects and working styles, I now seek continuity and belonging to contribute long-term to a product I believe in. I am looking for a remote role with 2-3 days on-site per month.
+  I have extensive experience in creating dynamic user interfaces and I am committed to pixel-perfect design. I balance code quality with project timelines and adapt to team expectations. My diverse experience includes corporate web site, web3 web games and SaaS solutions.
+`,
   aboutItems: [
-    {label: 'Location', text: 'Victoria, BC', Icon: MapIcon},
-    {label: 'Age', text: '29', Icon: CalendarIcon},
-    {label: 'Nationality', text: 'Canadian / Irish', Icon: FlagIcon},
-    {label: 'Interests', text: 'Motorcycles, Muay Thai, Banjos', Icon: SparklesIcon},
-    {label: 'Study', text: 'University of Victoria', Icon: AcademicCapIcon},
-    {label: 'Employment', text: 'Instant Domains, inc.', Icon: OfficeBuildingIcon},
+    {label: 'Location', text: 'Chorges, France', Icon: MapIcon},
+    {label: 'Age', text: '44', Icon: CalendarIcon},
+    {label: 'Nationality', text: 'French', Icon: FlagIcon},
+    {label: 'Interests', text: 'Trekking, running, climbing, reading', Icon: SparklesIcon},
+    {label: 'Study', text: 'Engineer from Ecole Centrale Marseille', Icon: AcademicCapIcon},
+    {label: 'Employment', text: 'freelance', Icon: OfficeBuildingIcon},
   ],
 };
 
@@ -122,70 +124,85 @@ export const aboutData: About = {
  */
 export const skills: SkillGroup[] = [
   {
-    name: 'Spoken languages',
-    skills: [
-      {
-        name: 'English',
-        level: 10,
-      },
-      {
-        name: 'French',
-        level: 4,
-      },
-      {
-        name: 'Spanish',
-        level: 3,
-      },
-    ],
-  },
-  {
     name: 'Frontend development',
     skills: [
       {
         name: 'React',
-        level: 9,
+        level: 10,
+      },
+      {
+        name: 'Next.js',
+        level: 10,
       },
       {
         name: 'Typescript',
-        level: 7,
+        level: 10,
+      },
+      {
+        name: 'Redux',
+        level: 10,
+      },
+      {
+        name: 'React-Query',
+        level: 10,
       },
       {
         name: 'GraphQL',
-        level: 6,
+        level: 10,
+      },
+      {
+        name: 'Tailwind',
+        level: 10,
+      },
+      {
+        name: 'Styled-Component',
+        level: 10,
+      },
+      {
+        name: 'CSS',
+        level: 10,
       },
     ],
   },
   {
-    name: 'Backend development',
+    name: 'CI/CD',
     skills: [
       {
-        name: 'Node.js',
+        name: 'Git',
         level: 8,
       },
       {
-        name: 'Rust',
-        level: 5,
+        name: 'GitHub Actions',
+        level: 6,
       },
       {
-        name: 'Golang',
-        level: 4,
+        name: 'Docker',
+        level: 7,
+      },
+      {
+        name: 'React-Testing',
+        level: 8,
+      },
+      {
+        name: 'Cypress',
+        level: 8,
+      },
+      {
+        name: 'Linux',
+        level: 8,
       },
     ],
   },
   {
-    name: 'Mobile development',
+    name: 'Spoken languages',
     skills: [
       {
-        name: 'React Native',
-        level: 9,
+        name: 'English',
+        level: 8,
       },
       {
-        name: 'Flutter',
-        level: 4,
-      },
-      {
-        name: 'Swift',
-        level: 3,
+        name: 'French',
+        level: 10,
       },
     ],
   },
@@ -196,70 +213,82 @@ export const skills: SkillGroup[] = [
  */
 export const portfolioItems: PortfolioItem[] = [
   {
-    title: 'Project title 1',
-    description: 'Give a short description of your project here.',
-    url: 'https://timbaker.me',
+    title: 'The Smurfs Society',
+    description: 'Web3 Web Game',
+    url: 'https://app.thesmurfssociety.com/',
     image: porfolioImage1,
   },
   {
-    title: 'Project title 2',
-    description: 'Give a short description of your project here.',
-    url: 'https://timbaker.me',
+    title: 'The Smurfs Society',
+    description: 'Web3 Web Game',
+    url: 'https://app.thesmurfssociety.com/',
     image: porfolioImage2,
   },
   {
-    title: 'Project title 3',
-    description: 'Give a short description of your project here.',
-    url: 'https://timbaker.me',
+    title: 'The Smurfs Society',
+    description: 'Web3 Web Game',
+    url: 'https://app.thesmurfssociety.com/',
     image: porfolioImage3,
   },
   {
-    title: 'Project title 4',
-    description: 'Give a short description of your project here.',
-    url: 'https://timbaker.me',
+    title: 'Lalilo',
+    description: 'Educational Web Site',
+    url: 'https://p2ia.lalilo.com',
     image: porfolioImage4,
   },
   {
-    title: 'Project title 5',
-    description: 'Give a short description of your project here.',
-    url: 'https://timbaker.me',
+    title: 'Lalilo',
+    description: 'Educational Web Site',
+    url: 'https://p2ia.lalilo.com',
     image: porfolioImage5,
   },
   {
-    title: 'Project title 6',
-    description: 'Give a short description of your project here.',
-    url: 'https://timbaker.me',
+    title: 'Moona',
+    description: 'Payment platform',
+    url: 'https://moona.com/',
     image: porfolioImage6,
   },
   {
-    title: 'Project title 7',
-    description: 'Give a short description of your project here.',
-    url: 'https://timbaker.me',
+    title: 'Moona',
+    description: 'Payment platform',
+    url: 'https://moona.com/',
     image: porfolioImage7,
   },
   {
-    title: 'Project title 8',
-    description: 'Give a short description of your project here.',
-    url: 'https://timbaker.me',
+    title: 'Moona',
+    description: 'Payment platform',
+    url: 'https://moona.com/',
     image: porfolioImage8,
   },
   {
-    title: 'Project title 9',
-    description: 'Give a short description of your project here.',
-    url: 'https://timbaker.me',
+    title: 'RenovationMan',
+    description: 'Corporate Web Site',
+    url: 'https://www.renovationman.com/',
     image: porfolioImage9,
   },
   {
-    title: 'Project title 10',
-    description: 'Give a short description of your project here.',
-    url: 'https://timbaker.me',
+    title: 'Syment',
+    description: 'Saas for real estate syndic',
+    url: 'https://www.syment.com/',
     image: porfolioImage10,
   },
   {
-    title: 'Project title 11',
-    description: 'Give a short description of your project here.',
-    url: 'https://timbaker.me',
+    title: 'Syment',
+    description: 'Saas for real estate syndic',
+    url: 'https://www.syment.com/',
     image: porfolioImage11,
+  },
+  {
+    title: 'Syment',
+    description: 'Saas for real estate syndic',
+    url: 'https://www.syment.com/',
+    image: porfolioImage12,
+  },
+  {
+    title: 'Syment',
+    description: 'Saas for real estate syndic',
+    url: 'https://www.syment.com/',
+    image: porfolioImage13,
   },
 ];
 
@@ -268,39 +297,143 @@ export const portfolioItems: PortfolioItem[] = [
  */
 export const education: TimelineItem[] = [
   {
-    date: 'April 2007',
-    location: 'Clown college',
-    title: 'Masters in Beer tasting',
-    content: <p>Describe your experience at school, what you learned, what useful skills you have acquired etc.</p>,
-  },
-  {
-    date: 'March 2003',
-    location: 'School of Business',
-    title: 'What did you study 101',
-    content: <p>Describe your experience at school, what you learned, what useful skills you have acquired etc.</p>,
+    date: 'September 2003',
+    location: 'Ecole Centrale Marseille',
+    title: 'Engineer graduated with honors',
+    content: <p>Specialized in computer science, Java and C++</p>,
   },
 ];
 
 export const experience: TimelineItem[] = [
   {
-    date: 'March 2010 - Present',
-    location: 'Awesome Development Company',
-    title: 'Senior UX Engineer',
+    date: 'September 2019 – Present',
+    location: 'Full Remote',
+    title: 'React Frontend Developer (freelance)',
+    content: (
+      <div>
+        <p>
+          Since the end of 2019, I have been freelancing for various clients across multiple industries so I have
+          experience integrating into existing development teams to assist with feature development.
+        </p>
+        <p>
+          I developed applications using React, TypeScript and Redux, as well as React-Query, to create dynamic and
+          scalable user interfaces.
+        </p>
+        <p>
+          I conducted rigorous unit testing using React-Testing, Jest, and Cypress to ensure the quality and
+          functionality of the applications.
+        </p>
+        <p>
+          As a proponent of pixel-perfect design, I develop graphical interfaces from Figma mockups with meticulous
+          attention to detail. Strong advocate of TailwindCSS and Styled-Component
+        </p>
+        <p>
+          I Contributed to team collaboration and code quality by conducting thorough code reviews and pull requests on
+          GitHub.
+        </p>
+      </div>
+    ),
+  },
+  {
+    date: 'January 2023 – present',
+    location: 'Full Remote',
+    title: 'React Frontend Developper - GMRounded',
     content: (
       <p>
-        Describe work, special projects, notable achievements, what technologies you have been working with, and
-        anything else that would be useful for an employer to know.
+        I contributed to the development of a cryptocurrency accounting SaaS solution targeted for the American market:
+        Next.js, Typescript, Tailwind, Style-Component, Rest API
       </p>
     ),
   },
   {
-    date: 'March 2007 - February 2010',
-    location: 'Garage Startup Studio',
-    title: 'Junior bug fixer',
+    date: 'September 2022 – December 2022',
+    location: 'Full Remote',
+    title: 'React Frontend Developper - Blueplan',
     content: (
       <p>
-        Describe work, special projects, notable achievements, what technologies you have been working with, and
-        anything else that would be useful for an employer to know.
+        Based on Figma mockup I developed a web game "The Smurfs" using Next.js and Web3, where the objective is to earn
+        access to pre-sales of "The Smurfs" NFTs: Next.js, React.js, Typescript, Stype-Components, Tailwind, Rest API,
+        Web3
+      </p>
+    ),
+  },
+  {
+    date: 'December 2022 – August 2022',
+    location: 'Full Remote',
+    title: 'React Frontend Developper - Syment',
+    content: (
+      <p>
+        Bug fixing and development of new features on the front-end development on SaaS platform for managing general
+        assemblies for real estate professionals.. React, Typescript, Redux, React-Query, Style-Components,
+        Tailwind, Rest API
+      </p>
+    ),
+  },
+  {
+    date: 'April 2021 – October 2021',
+    location: 'Full Remote',
+    title: 'React Frontend Developper - Obat',
+    content: (
+      <p>
+        Bug fixing and development of new features on the frontend of a SaaS solution for building quotes and invoices. 
+        TDD, React, Redux, Saga, and TypeScript, Rest API, 
+      </p>
+    ),
+  },
+  {
+    date: 'August 2020 – December 2020',
+    location: 'Full Remote',
+    title: 'React Frontend Developper - Lalilo',
+    content: (
+      <p>
+        After partnering with the French Ministry of Education through the Innovation Partnership for Artificial
+        Intelligence (P2IA), Lalilo tasked me with developing the p2ia.lalilo.com website to showcase this
+        collaboration:  React.js, TypeScript, styled-components
+      </p>
+    ),
+  },
+  {
+    date: 'October 2019 – February 2020',
+    location: 'Full Remote',
+    title: 'React Frontend Developper - RenovationMan',
+    content: (
+      <p>
+        Develop from scratch https://www.renovationman.com website on the JAMStack principles using Gatsby as a static
+        site generator and DatoCMS as an online Headless CMS.  React.js, GatsbyJS, GraphQL, DatoCMS.
+      </p>
+    ),
+  },
+  {
+    date: 'December 2017 – September 2019',
+    location: 'Chorges',
+    title: 'React Frontend Developper - Websenso',
+    content: (
+      <p>
+        My mission was to develop React applications within a web agency using Drupal 8 Headless as the backend: React,
+        Bootstrap, Drupal, GraphQL
+      </p>
+    ),
+  },
+  {
+    date: 'September 2012 – September 2017',
+    location: 'Chambéry, Valence, Gap',
+    title: 'Plumber as a Contractor and as a Business Owner',
+    content: (
+      <p>
+        I completed my plumbing vocational training (CAP) in one year in Chambéry, and then worked as a plumbing and
+        heating technician for 5 years, including as a temporary worker, on fixed-term contracts, and as a self-employed
+        artisan.
+      </p>
+    ),
+  },
+  {
+    date: 'September 2003 – September 2012',
+    location: 'Paris, Marseille, Dublin, Tunis',
+    title: 'Java Backend Developer - Capgemini/Bull',
+    content: (
+      <p>
+        I mainly contributed to the integration of large Java/J2EE software packages for Capgemini and the development
+        of Java/J2EE applications from scratch for Bull. EJB3, JPA (Hibernate), Java Web Start, JBoss, Weblogic, Oracle
       </p>
     ),
   },
@@ -313,19 +446,24 @@ export const testimonial: TestimonialSection = {
   imageSrc: testimonialImage,
   testimonials: [
     {
-      name: 'John Doe',
-      text: 'Use this as an opportunity to promote what it is like to work with you. High value testimonials include ones from current or past co-workers, managers, or from happy clients.',
-      image: 'https://cloudflare-ipfs.com/ipfs/Qmd3W5DuhgHirLHGVixi6V76LhCkZUz6pnFt5AJBiyvHye/avatar/169.jpg',
+      name: 'Aymeric CEO - Rounded Technologies',
+      text: 'I had the pleasure of working with Christophe, a front-end developer freelancer, and I must say that my experience with him was truly exceptional. From the start, he was highly professional, communicative, and dedicated to delivering high-quality work. Throughout the project, Christophe maintained clear and consistent communication, keeping us up-to-date on his progress and soliciting feedback to ensure that the end result met our needs. He was highly responsive to our requests and was always willing to go the extra mile to ensure that our project was successful. Overall, I highly recommend Christophe as a front-end developer freelancer. His professionalism, expertise, and dedication to his craft make him a valuable asset to any team, and I look forward to the opportunity to work with him again in the future. Thank you',
+      image: '',
     },
     {
-      name: 'Jane Doe',
-      text: 'Here you should write some nice things that someone has said about you. Encourage them to be specific and include important details (notes about a project you were on together, impressive quality produced, etc).',
-      image: 'https://cloudflare-ipfs.com/ipfs/Qmd3W5DuhgHirLHGVixi6V76LhCkZUz6pnFt5AJBiyvHye/avatar/14.jpg',
+      name: 'Florent CTO - Syment',
+      text: 'Christophe intervened in a rather difficult technical context and accompanied us in a technical migration allowing us to approach the future more serenely. In parallel to this task, he was able to contribute to the development of new functionalities while respecting the deadlines (sometimes a bit short). I recommend Christophe who has a very good knowledge of React and its eco-system.',
+      image: '',
     },
     {
-      name: 'Someone else',
-      text: 'Add several of these, and keep them as fresh as possible, but be sure to focus on quality testimonials with strong highlights of your skills/work ethic.',
-      image: 'https://cloudflare-ipfs.com/ipfs/Qmd3W5DuhgHirLHGVixi6V76LhCkZUz6pnFt5AJBiyvHye/avatar/69.jpg',
+      name: 'Natacha PO - Lalilo',
+      text: "It's a pleasure to work with Christophe, he's a great resource, he knows how to organize himself very well and he naturally adapts to the constraints we may encounter. Christophe also has good organizational skills, which makes iterations and improvements of the projects he works on easy and pleasant.",
+      image: '',
+    },
+    {
+      name: 'Alexandre Estela CTO - Renovation Man',
+      text: 'We called Christophe to help us redesign our website, with the objective to gain in maintainability and SEO performance. Christophe was able to integrate perfectly with our tech and product teams, and was able to carry out this migration project by proposing many technical solutions for our needs. We are very satisfied with this collaboration and the results are up to our expectations, we recommend Christophe without hesitation!',
+      image: '',
     },
   ],
 };
@@ -336,27 +474,17 @@ export const testimonial: TestimonialSection = {
 
 export const contact: ContactSection = {
   headerText: 'Get in touch.',
-  description: 'Here is a good spot for a message to your readers to let them know how best to reach out to you.',
+  description: '',
   items: [
     {
       type: ContactType.Email,
-      text: 'reachout@timbaker.me',
-      href: 'mailto:reachout@timbaker.me',
+      text: 'christophe.seguinot@gmail.com',
+      href: 'mailto:christophe.seguinot@gmail.com',
     },
     {
       type: ContactType.Location,
-      text: 'Victoria BC, Canada',
-      href: 'https://www.google.ca/maps/place/Victoria,+BC/@48.4262362,-123.376775,14z',
-    },
-    {
-      type: ContactType.Instagram,
-      text: '@tbakerx',
-      href: 'https://www.instagram.com/tbakerx/',
-    },
-    {
-      type: ContactType.Github,
-      text: 'tbakerx',
-      href: 'https://github.com/tbakerx',
+      text: 'Chorge, France',
+      href: 'https://goo.gl/maps/ra4R5ZCRkWaSxYwV7',
     },
   ],
 };
@@ -365,9 +493,5 @@ export const contact: ContactSection = {
  * Social items
  */
 export const socialLinks: Social[] = [
-  {label: 'Github', Icon: GithubIcon, href: 'https://github.com/tbakerx'},
-  {label: 'Stack Overflow', Icon: StackOverflowIcon, href: 'https://stackoverflow.com/users/8553186/tim-baker'},
-  {label: 'LinkedIn', Icon: LinkedInIcon, href: 'https://www.linkedin.com/in/timbakerx/'},
-  {label: 'Instagram', Icon: InstagramIcon, href: 'https://www.instagram.com/tbakerx/'},
-  {label: 'Twitter', Icon: TwitterIcon, href: 'https://twitter.com/TimBakerx'},
+  {label: 'LinkedIn', Icon: LinkedInIcon, href: 'https://www.linkedin.com/in/christopheseguinot/'},
 ];
