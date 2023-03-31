@@ -8,21 +8,21 @@ import {
   SparklesIcon,
 } from '@heroicons/react/outline';
 
+import porfolioImage1 from '../../public/images/blueplan-4.png';
+import porfolioImage2 from '../../public/images/blueplan-5.png';
+import porfolioImage3 from '../../public/images/blueplan-6.png';
+import porfolioImage4 from '../../public/images/lalilo-1.png';
+import porfolioImage5 from '../../public/images/lalilo-2.png';
+import porfolioImage7 from '../../public/images/moona-1.png';
+import porfolioImage6 from '../../public/images/moona-2.png';
+import porfolioImage8 from '../../public/images/moona-3.png';
+import porfolioImage9 from '../../public/images/renovationman-1.png';
+import porfolioImage10 from '../../public/images/syment-1.png';
+import porfolioImage11 from '../../public/images/syment-2.png';
+import porfolioImage12 from '../../public/images/syment-3.png';
+import porfolioImage13 from '../../public/images/syment-4.png';
 import LinkedInIcon from '../components/Icon/LinkedInIcon';
 import heroImage from '../images/header-background.webp';
-import porfolioImage1 from '../images/portfolio/blueplan-4.png';
-import porfolioImage2 from '../images/portfolio/blueplan-5.png';
-import porfolioImage3 from '../images/portfolio/blueplan-6.png';
-import porfolioImage4 from '../images/portfolio/lalilo-1.png';
-import porfolioImage5 from '../images/portfolio/lalilo-2.png';
-import porfolioImage7 from '../images/portfolio/moona-1.png';
-import porfolioImage6 from '../images/portfolio/moona-2.png';
-import porfolioImage8 from '../images/portfolio/moona-3.png';
-import porfolioImage9 from '../images/portfolio/renovationman-1.png';
-import porfolioImage10 from '../images/portfolio/syment-1.png';
-import porfolioImage11 from '../images/portfolio/syment-2.png';
-import porfolioImage12 from '../images/portfolio/syment-3.png';
-import porfolioImage13 from '../images/portfolio/syment-4.png';
 import profilepic from '../images/profile.webp';
 import testimonialImage from '../images/testimonial.webp';
 import {

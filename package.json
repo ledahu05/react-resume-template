@@ -20,7 +20,8 @@
     "react": "^18.1.0",
     "react-dom": "^18.1.0",
     "react-modal-image": "^2.6.0",
-    "ts-pattern": "^4.0.3"
+    "ts-pattern": "^4.0.3",
+    "yet-another-react-lightbox": "^3.2.0"
   },
   "devDependencies": {
     "@next/eslint-plugin-next": "^12.1.0",
