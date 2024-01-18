@@ -8,15 +8,18 @@ import {
   SparklesIcon,
 } from '@heroicons/react/outline';
 
+import adminuiProduct from '../../public/images/adminui-product.png';
 import porfolioImage1 from '../../public/images/blueplan-4.png';
 import porfolioImage2 from '../../public/images/blueplan-5.png';
 import porfolioImage3 from '../../public/images/blueplan-6.png';
+import catalog from '../../public/images/catalog.png';
 import porfolioImage4 from '../../public/images/lalilo-1.png';
 import porfolioImage5 from '../../public/images/lalilo-2.png';
 import porfolioImage7 from '../../public/images/moona-1.png';
 import porfolioImage6 from '../../public/images/moona-2.png';
 import porfolioImage8 from '../../public/images/moona-3.png';
 import porfolioImage9 from '../../public/images/renovationman-1.png';
+import storefrontHome from '../../public/images/storefront-home.png';
 import porfolioImage10 from '../../public/images/syment-1.png';
 import porfolioImage11 from '../../public/images/syment-2.png';
 import porfolioImage12 from '../../public/images/syment-3.png';
@@ -72,9 +75,8 @@ export const heroData: Hero = {
     <>
       <p className="prose-sm text-stone-200 sm:prose-base lg:prose-lg">
         I'm a Hautes-Alpes based <strong className="text-stone-100">Senior Frontend Software Engineer</strong>,
-        currently working as a freelance and looking for a{' '}
-        <strong className="text-stone-100">permanent contract</strong>, I'm expert in React/Typescript with extensive
-        experience developing high-quality applications using modern web technologies and frameworks.
+        currently working as a freelance. I'm expert in React/Typescript with extensive experience developing
+        high-quality applications using modern React, Next and Typescript.
       </p>
       <p className="prose-sm text-stone-200 sm:prose-base lg:prose-lg">
         I am a strong advocate for <strong className="text-stone-100">best practices</strong> and{' '}
@@ -105,8 +107,8 @@ export const heroData: Hero = {
  */
 export const aboutData: About = {
   profileImageSrc: profilepic,
+  // Initially working as a freelancer to explore various projects and working styles, I now seek continuity and belonging to contribute long-term to a product I believe in. I am looking for a remote role with 2-3 days on-site per month.
   description: `I have been in web development for over 10 years. With expertise in React, Next.js, TypeScript, and other web technologies, I have a proven track record of delivering high-quality applications and integrating seamlessly into development teams.
-  Initially working as a freelancer to explore various projects and working styles, I now seek continuity and belonging to contribute long-term to a product I believe in. I am looking for a remote role with 2-3 days on-site per month.
   I have extensive experience in creating dynamic user interfaces and I am committed to pixel-perfect design. I balance code quality with project timelines and adapt to team expectations. My diverse experience includes corporate web site, web3 web games and SaaS solutions.
 `,
   aboutItems: [
@@ -231,6 +233,30 @@ export const portfolioItems: PortfolioItem[] = [
     image: porfolioImage3,
   },
   {
+    title: 'Clickn Collect',
+    description: 'Vitrine Web Site',
+    url: '',
+    image: storefrontHome,
+  },
+  {
+    title: 'Clickn Collect',
+    description: 'Admin Web Site',
+    url: '',
+    image: catalog,
+  },
+  {
+    title: 'Clickn Collect',
+    description: 'Admin Web Site',
+    url: '',
+    image: adminuiProduct,
+  },
+  {
+    title: 'The Smurfs Society',
+    description: 'Web3 Web Game',
+    url: 'https://app.thesmurfssociety.com/',
+    image: porfolioImage3,
+  },
+  {
     title: 'Lalilo',
     description: 'Educational Web Site',
     url: 'https://p2ia.lalilo.com',
@@ -316,8 +342,8 @@ export const experience: TimelineItem[] = [
           experience integrating into existing development teams to assist with feature development.
         </p>
         <p>
-          I developed applications using React, TypeScript and Redux, as well as React-Query, to create dynamic and
-          scalable user interfaces.
+          I developed applications using React, TypeScript and Redux, as well as Graphql and React-Query, to create
+          dynamic and scalable user interfaces.
         </p>
         <p>
           I conducted rigorous unit testing using React-Testing, Jest, and Cypress to ensure the quality and
@@ -343,6 +369,40 @@ export const experience: TimelineItem[] = [
         I contributed to the development of a cryptocurrency accounting SaaS solution targeted for the American market:
         Next.js, Typescript, Tailwind, Style-Component, Rest API
       </p>
+    ),
+  },
+  {
+    date: 'May 2023 – December 2023',
+    location: 'Full Remote',
+    title: 'React/Next Frontend Developper - Clickn collect',
+    content: (
+      <>
+        <p>
+          I joined a two-person startup based in Reunion Island for a period of 7 months, consisting of a Product Owner
+          (PO) and a backend developer, with the goal of developing the V1.0 of two platforms using
+          nextjs/tailwind/graphql.
+        </p>
+        <p>
+          I led the development of the frontend for both platforms from development to production, as I was the sole
+          team member with React skills.
+        </p>
+        <p>
+          The client platform serves as an e-commerce showcase (backend based on Vendure) aimed at highlighting stores,
+          products and digital catalogs sold by small and medium-sized enterprises (TPE/TME) in Reunion Island.
+        </p>
+        <p>
+          The administration platform allows different sellers to create their store profiles and various products.
+          Based on this information, we developed a "builder" (built on a fork of react-page + implementation of a lerna
+          monorepo) that enables sellers to create digital catalogs using drag-and-drop functionality. Sellers can
+          subscribe to offers (payment via Stripe) to publish their catalogs and showcase their products on the
+          storefront.
+        </p>
+        <p>
+          SEO, performance, accessibility, and responsiveness were crucial criteria for the project's success. I
+          developed both platforms based on Figma mockups created by a designer.
+        </p>
+        <p>Next.js, Typescript, TailwindCSS, Graphql, Vercel, Vendure</p>
+      </>
     ),
   },
   {
@@ -445,6 +505,11 @@ export const experience: TimelineItem[] = [
 export const testimonial: TestimonialSection = {
   imageSrc: testimonialImage,
   testimonials: [
+    {
+      name: 'Frédéric CEO - Clickn Collect',
+      text: 'Ma 3ème mission avec Christophe a été comme les autres fois, une réussite totale ! Il est devenu évident que faire appel à lui est une garantie de qualité. Son professionnalisme exemplaire et son approche méthodique font de chaque mission une expérience fluide. Collaborer avec lui est une valeur ajoutée indéniable !',
+      image: '',
+    },
     {
       name: 'Aymeric CEO - Rounded Technologies',
       text: 'I had the pleasure of working with Christophe, a front-end developer freelancer, and I must say that my experience with him was truly exceptional. From the start, he was highly professional, communicative, and dedicated to delivering high-quality work. Throughout the project, Christophe maintained clear and consistent communication, keeping us up-to-date on his progress and soliciting feedback to ensure that the end result met our needs. He was highly responsive to our requests and was always willing to go the extra mile to ensure that our project was successful. Overall, I highly recommend Christophe as a front-end developer freelancer. His professionalism, expertise, and dedication to his craft make him a valuable asset to any team, and I look forward to the opportunity to work with him again in the future. Thank you',
