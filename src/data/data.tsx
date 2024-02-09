@@ -63,7 +63,7 @@ export const SectionId = {
   Testimonials: 'testimonials',
 } as const;
 
-export type SectionId = typeof SectionId[keyof typeof SectionId];
+export type SectionId = (typeof SectionId)[keyof typeof SectionId];
 
 /**
  * Hero section
@@ -76,7 +76,7 @@ export const heroData: Hero = {
       <p className="prose-sm text-stone-200 sm:prose-base lg:prose-lg">
         I'm a Hautes-Alpes based <strong className="text-stone-100">Senior Frontend Software Engineer</strong>,
         currently working as a freelance. I'm expert in React/Typescript with extensive experience developing
-        high-quality applications using modern React, Next and Typescript.
+        high-quality applications using modern React, Next, Typescript and Redux.
       </p>
       <p className="prose-sm text-stone-200 sm:prose-base lg:prose-lg">
         I am a strong advocate for <strong className="text-stone-100">best practices</strong> and{' '}
@@ -109,13 +109,13 @@ export const aboutData: About = {
   profileImageSrc: profilepic,
   // Initially working as a freelancer to explore various projects and working styles, I now seek continuity and belonging to contribute long-term to a product I believe in. I am looking for a remote role with 2-3 days on-site per month.
   description: `I have been in web development for over 10 years. With expertise in React, Next.js, TypeScript, and other web technologies, I have a proven track record of delivering high-quality applications and integrating seamlessly into development teams.
-  I have extensive experience in creating dynamic user interfaces and I am committed to pixel-perfect design. I balance code quality with project timelines and adapt to team expectations. My diverse experience includes corporate web site, web3 web games and SaaS solutions.
+  I have extensive experience in creating dynamic user interfaces and I am committed to pixel-perfect design. I balance code quality with project timelines and adapt to team expectations. My diverse experience includes corporate web site, web3 web games, SaaS solutions and e-commerce.
 `,
   aboutItems: [
     {label: 'Location', text: 'Chorges, France', Icon: MapIcon},
     {label: 'Age', text: '44', Icon: CalendarIcon},
     {label: 'Nationality', text: 'French', Icon: FlagIcon},
-    {label: 'Interests', text: 'Trekking, running, climbing, reading', Icon: SparklesIcon},
+    {label: 'Interests', text: 'Trekking, running, climbing, learning, reading', Icon: SparklesIcon},
     {label: 'Study', text: 'Engineer from Ecole Centrale Marseille', Icon: AcademicCapIcon},
     {label: 'Employment', text: 'freelance', Icon: OfficeBuildingIcon},
   ],
@@ -126,18 +126,36 @@ export const aboutData: About = {
  */
 export const skills: SkillGroup[] = [
   {
+    name: 'Soft skills',
+    skills: [
+      {
+        name: 'Agile, Scrum, Kanban',
+        level: 10,
+      },
+
+      {
+        name: 'Teamwork',
+        level: 10,
+      },
+      {
+        name: 'Good learner',
+        level: 10,
+      },
+      {
+        name: 'Empathy',
+        level: 10,
+      },
+      {
+        name: 'Communication',
+        level: 10,
+      },
+    ],
+  },
+  {
     name: 'Frontend development',
     skills: [
       {
-        name: 'React',
-        level: 10,
-      },
-      {
-        name: 'Next.js',
-        level: 10,
-      },
-      {
-        name: 'Typescript',
+        name: 'React, Next, Typescript',
         level: 10,
       },
       {
@@ -145,23 +163,19 @@ export const skills: SkillGroup[] = [
         level: 10,
       },
       {
+        name: 'Tailwind, Styled-Component, CSS',
+        level: 10,
+      },
+      {
         name: 'React-Query',
         level: 10,
       },
       {
-        name: 'GraphQL',
+        name: 'GraphQL & Rest API',
         level: 10,
       },
       {
-        name: 'Tailwind',
-        level: 10,
-      },
-      {
-        name: 'Styled-Component',
-        level: 10,
-      },
-      {
-        name: 'CSS',
+        name: 'Copilot',
         level: 10,
       },
     ],
@@ -170,24 +184,20 @@ export const skills: SkillGroup[] = [
     name: 'CI/CD',
     skills: [
       {
-        name: 'Git',
-        level: 8,
+        name: 'Git, Code Review, CI/CD',
+        level: 10,
       },
       {
-        name: 'GitHub Actions',
-        level: 6,
+        name: 'Jest, React-Testing, Cypress',
+        level: 10,
+      },
+      {
+        name: 'Storybook',
+        level: 10,
       },
       {
         name: 'Docker',
         level: 7,
-      },
-      {
-        name: 'React-Testing',
-        level: 8,
-      },
-      {
-        name: 'Cypress',
-        level: 8,
       },
       {
         name: 'Linux',
@@ -323,10 +333,10 @@ export const portfolioItems: PortfolioItem[] = [
  */
 export const education: TimelineItem[] = [
   {
-    date: 'September 2003',
-    location: 'Ecole Centrale Marseille',
-    title: 'Engineer graduated with honors',
-    content: <p>Specialized in computer science, Java and C++</p>,
+    date: 'September 2000 - September 2003',
+    location: '',
+    title: 'Central Marseille engineering school',
+    content: <p>Engineer graduated with honours</p>,
   },
 ];
 
@@ -338,70 +348,63 @@ export const experience: TimelineItem[] = [
     content: (
       <div>
         <p>
-          Since the end of 2019, I have been freelancing for various clients across multiple industries so I have
+          - Since the end of 2019, I have been freelancing for various clients across multiple industries so I have
           experience integrating into existing development teams to assist with feature development.
         </p>
         <p>
-          I developed applications using React, TypeScript and Redux, as well as Graphql and React-Query, to create
+          - I developed applications using React, TypeScript and Redux, as well as Graphql and React-Query, to create
           dynamic and scalable user interfaces.
         </p>
         <p>
-          I conducted rigorous unit testing using React-Testing, Jest, and Cypress to ensure the quality and
+          - I conducted rigorous unit testing using React-Testing, Jest, and Cypress to ensure the quality and
           functionality of the applications.
         </p>
         <p>
-          As a proponent of pixel-perfect design, I develop graphical interfaces from Figma mockups with meticulous
+          - As a proponent of pixel-perfect design, I develop graphical interfaces from Figma mockups with meticulous
           attention to detail. Strong advocate of TailwindCSS and Styled-Component
         </p>
         <p>
-          I Contributed to team collaboration and code quality by conducting thorough code reviews and pull requests on
-          GitHub.
+          - I Contributed to team collaboration and code quality by conducting thorough code reviews and pull requests
+          on GitHub.
         </p>
+        <p>- I led junior developers</p>
       </div>
     ),
   },
-  {
-    date: 'January 2023 – present',
-    location: 'Full Remote',
-    title: 'React Frontend Developper - GMRounded',
-    content: (
-      <p>
-        I contributed to the development of a cryptocurrency accounting SaaS solution targeted for the American market:
-        Next.js, Typescript, Tailwind, Style-Component, Rest API
-      </p>
-    ),
-  },
+
   {
     date: 'May 2023 – December 2023',
     location: 'Full Remote',
     title: 'React/Next Frontend Developper - Clickn collect',
     content: (
       <>
+        <p>- Context: Ecommerce and SAAS, development from scratch</p>
+        <p>- Project: An e-commerce showcase and SaaS platform for creating digital catalogs</p>
+        <p>- Team: One product owner and one backend developer</p>
         <p>
-          I joined a two-person startup based in Reunion Island for a period of 7 months, consisting of a Product Owner
-          (PO) and a backend developer, with the goal of developing the V1.0 of two platforms using
-          nextjs/tailwind/graphql.
+          - Main achievements: Front-end development lead for both solutions, from creation to online launch.
+          Integration of a Figma model and graphql endpoints provided by the Vendure backend. Participation in product
+          definition, solution roadmap and share of my experience in Web and SaaS development. Integration of payments
+          via Stripe. Development of a mobile-first, high-performance solution, optimized for SEO and accessibility.
         </p>
+        <p>- Stack: Next 14, Typescript, Graphql, Redux, Tailwind, HeadlessUI, Jest, React-testing, Cypress</p>
+      </>
+    ),
+  },
+  {
+    date: 'January 2023 – May 2023',
+    location: 'Full Remote',
+    title: 'React Frontend Developper - GMRounded',
+    content: (
+      <>
+        <p>- Context: Crypto and SaaS accounting</p>
+        <p>- Project: Development of an accounting solution for the US and cryptocurrencies</p>
+        <p>- Team: One Product Owner, one Python backend developer and one junior react developer.</p>
         <p>
-          I led the development of the frontend for both platforms from development to production, as I was the sole
-          team member with React skills.
+          - Main achievements: Audit of existing codebase and suggestions for improvements. Integration of the Python
+          Rest API. Implementation of new functionalities and maintenance
         </p>
-        <p>
-          The client platform serves as an e-commerce showcase (backend based on Vendure) aimed at highlighting stores,
-          products and digital catalogs sold by small and medium-sized enterprises (TPE/TME) in Reunion Island.
-        </p>
-        <p>
-          The administration platform allows different sellers to create their store profiles and various products.
-          Based on this information, we developed a "builder" (built on a fork of react-page + implementation of a lerna
-          monorepo) that enables sellers to create digital catalogs using drag-and-drop functionality. Sellers can
-          subscribe to offers (payment via Stripe) to publish their catalogs and showcase their products on the
-          storefront.
-        </p>
-        <p>
-          SEO, performance, accessibility, and responsiveness were crucial criteria for the project's success. I
-          developed both platforms based on Figma mockups created by a designer.
-        </p>
-        <p>Next.js, Typescript, TailwindCSS, Graphql, Vercel, Vendure</p>
+        <p>- Stack: Next.js, React.js, TypeScript, Redux, Material UI, Tailwind, Styled Components, Cypress</p>
       </>
     ),
   },
@@ -410,11 +413,20 @@ export const experience: TimelineItem[] = [
     location: 'Full Remote',
     title: 'React Frontend Developper - Blueplan',
     content: (
-      <p>
-        Based on Figma mockup I developed a web game "The Smurfs" using Next.js and Web3, where the objective is to earn
-        access to pre-sales of "The Smurfs" NFTs: Next.js, React.js, Typescript, Stype-Components, Tailwind, Rest API,
-        Web3
-      </p>
+      <>
+        <p>- Context: Web3, NFT and web games</p>
+        <p>- Project: Development of a web game to promote NFT "The Smurfs".</p>
+        <p>- Team: A CTO in San Fransisco and a Web3 developer in Bali</p>
+        <p>
+          - Main achievements: Understanding the challenges of Web3 and the architecture of a React/Web3 application.
+          Pixel-perfect integration of a Figma model with an artistic design. From scratch development of the game in
+          mock mode to enable the web3 developer to easily integrate the backend logic. Collaboration in an
+          international context
+        </p>
+        <p>
+          - Stack: Next.js, React.js, TypeScript, Styled Components, Tailwind, Rest API, Web3, Git, CI/CD, Mobile first
+        </p>
+      </>
     ),
   },
   {
@@ -422,11 +434,21 @@ export const experience: TimelineItem[] = [
     location: 'Full Remote',
     title: 'React Frontend Developper - Syment',
     content: (
-      <p>
-        Bug fixing and development of new features on the front-end development on SaaS platform for managing general
-        assemblies for real estate professionals.. React, Typescript, Redux, React-Query, Style-Components,
-        Tailwind, Rest API
-      </p>
+      <>
+        <p>- Context: Real Estate and SaaS</p>
+        <p>- Project: Operating platform for condominium managers</p>
+        <p>- Team: A CTO, a Product Owner, a Project Manager/Designer, 2 Symponie PHP backend developers</p>
+        <p>
+          {' '}
+          - Main achievements: Takeover of the existing codebase. Maintenance and development of new functionalities
+          such Automating the mailing of official reports by recorded delivery with acknowledgement of receipt.
+          Performance optimization. Lead of junior developers
+        </p>
+        <p>
+          - Stack: React, TypeScript, Redux, React-Query, TailwindCSS, Styled-Components, UX, WebSocket, React-Testing,
+          Cypress, Git, CI/CD
+        </p>
+      </>
     ),
   },
   {
@@ -434,22 +456,61 @@ export const experience: TimelineItem[] = [
     location: 'Full Remote',
     title: 'React Frontend Developper - Obat',
     content: (
-      <p>
-        Bug fixing and development of new features on the frontend of a SaaS solution for building quotes and invoices. 
-        TDD, React, Redux, Saga, and TypeScript, Rest API, 
-      </p>
+      <>
+        <p>- Context: Building and SaaS, migration from jquery to react</p>
+        <p>- Project: A quotation/billing platform dedicated to building professionals</p>
+        <p>
+          {' '}
+          - Team: One product owner, QA team (3 people), back-end team (PHP Symphonie, 4 people),  front-end team (4
+          people)
+        </p>
+        <p>
+          - Main achievements: Takeover of existing codebase, Migration of all listing pages to react, Adherence to Test
+          Driven Development approach, Systematic integration of new components into Storybook, Lead of junior
+          developers
+        </p>
+        <p>
+          - Stack: React, Storybook, TypeScript, Redux, React-Query, Saga, React-Table, Styled-Components, UX,
+          React-Testing, Cypress, Git, CI/CD
+        </p>
+      </>
     ),
   },
   {
     date: 'August 2020 – December 2020',
     location: 'Full Remote',
-    title: 'React Frontend Developper - Lalilo',
+    title: 'Lead front end Developer React at Moon - Moona',
     content: (
-      <p>
-        After partnering with the French Ministry of Education through the Innovation Partnership for Artificial
-        Intelligence (P2IA), Lalilo tasked me with developing the p2ia.lalilo.com website to showcase this
-        collaboration:  React.js, TypeScript, styled-components
-      </p>
+      <>
+        <p>- Context: Fintech and SaaS</p>
+        <p>- Project: Development of a payment platform for ecommerce storefronts and a dashboard for merchants.</p>
+        <p>- Team: One nodejs/aws backend developer and one product owner/tester</p>
+        <p>
+          - Main achievements: Front-end development lead for both solutions, from creation to online launch. Backend
+          integration via graphql api and aws amplify (AWS Serverless). Mobile-first and and pixel-perfect development.
+          Full Stripe integration.
+        </p>
+        <p>
+          - Stack: React, Redux, Saga, Styled Components, TypeScript, Test-Driven Development (TDD), Grapql, AWS
+          serverless architecture, Stripe
+        </p>
+      </>
+    ),
+  },
+  {
+    date: 'April 2020 – May 2020',
+    location: 'Full Remote',
+    title: 'Lead front end Developer React at Moon - Lalilo',
+    content: (
+      <>
+        <p>- Project: Collaborative website between Lalilo and the French Ministry of Education</p>
+        <p>- Team: One product owner, one designer and many developers in code review</p>
+        <p>
+          - Main achievements: Development and launch of p2ia.lalilo.com from scratch for Lalilo in collaboration with
+          the French Ministry of Education. Reuse of components used by Lalilo in their SaaS and exposed in Storybook
+        </p>
+        <p>- Stack: React, CSS, Styled-Components, Storybook</p>
+      </>
     ),
   },
   {
@@ -457,10 +518,18 @@ export const experience: TimelineItem[] = [
     location: 'Full Remote',
     title: 'React Frontend Developper - RenovationMan',
     content: (
-      <p>
-        Develop from scratch https://www.renovationman.com website on the JAMStack principles using Gatsby as a static
-        site generator and DatoCMS as an online Headless CMS.  React.js, GatsbyJS, GraphQL, DatoCMS.
-      </p>
+      <>
+        <p className="text-left">- Context: Building and SaaS</p>
+        <p>Project: Corporate website redesign on JAMStack architecture</p>
+        <p>- Team: Marketing team, CTO</p>
+        <p>
+          - Main achievements: Explained the JAMStack concept to the marketing team. Drafting of documentation to enable
+          the marketing team to update the site's content. Definition of the data model and import of existing data into
+          Headless DatoCMS. Development of the corporate site with Gatsby in React and putting it online. Data retrieval
+          via Graphql API. Developed a mobile-first approach with a focus on performance and accessibility
+        </p>
+        <p>- Stack: Gatsby, React, Styled-Component, CSS, DatoCMS, GraphQL</p>
+      </>
     ),
   },
   {
@@ -468,10 +537,16 @@ export const experience: TimelineItem[] = [
     location: 'Chorges',
     title: 'React Frontend Developper - Websenso',
     content: (
-      <p>
-        My mission was to develop React applications within a web agency using Drupal 8 Headless as the backend: React,
-        Bootstrap, Drupal, GraphQL
-      </p>
+      <>
+        <p>- Context: Web agency</p> <p> Project: Numerous custom websites</p>
+        <p>
+          {' '}
+          - Team: A Product Owner, a designer, a frontend team and a backend team Main achievements: Development of a -
+          React website as a PWA with Drupal 8 Headless as back-end. Development of numerous websites with Drupal and
+          development of customizations in PHP
+        </p>
+        <p>- Stack: React, PHP, Drupal, CSS</p>
+      </>
     ),
   },
   {
